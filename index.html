@@ -8,29 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
- <link rel='stylesheet' href=./css/style.css>
+  <link rel="stylesheet" href="./css/style.css">
 
-<!-- Favicon gerado por https://realfavicongenerator.net/ -->
-
-<link rel="icon" type="image/png" sizes="192x192" href="./favicon_io/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="./favicon_io/android-chrome-512x512.png">
-<link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-<link rel="shortcut icon" href="./favicon_io/favicon.ico">
-<link rel="manifest" href="./favicon_io/site.webmanifest">
-    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon_io/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./favicon_io/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+  <link rel="shortcut icon" href="./favicon_io/favicon.ico">
+  <link rel="manifest" href="./favicon_io/site.webmanifest">
 </head>
 <body>
 
-      <!-- Canvas para o confete — cobre a tela inteira, decorativo -->
-  <canvas
-    id="confete"
+  <canvas id="confete"
     style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;display:none;"
-    aria-hidden="true"
-  ></canvas>
+    aria-hidden="true"></canvas>
 
-  <!-- Carimbo ISENTO — aparece quando imposto = 0 -->
   <div id="carimbo" aria-live="polite" aria-atomic="true">
     <div class="carimbo-box">
       <div class="ct">🇧🇷 ISENTO</div>
@@ -38,20 +31,31 @@
     </div>
   </div>
 
-  <!-- Faixa decorativa verde/amarelo/azul -->
   <div class="faixa-brasil" aria-hidden="true"></div>
 
- 
   <header role="banner">
     <div class="deco d1" aria-hidden="true"></div>
     <div class="deco d2" aria-hidden="true"></div>
     <div class="deco d3" aria-hidden="true"></div>
 
-    <div class="header-inner">
+    <div class="floating-icons" aria-hidden="true">
+      <svg class="float-icon calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="4" y="2" width="16" height="20" rx="2"/>
+        <path d="M8 7h8M8 11h8M8 15h.01M12 15h.01M16 15h.01M8 19h.01M12 19h.01M16 19h.01"/>
+      </svg>
+      <svg class="float-icon money" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"/>
+      </svg>
+      <svg class="float-icon notes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="6" width="20" height="14" rx="2"/>
+        <path d="M6 10h12M6 14h12"/>
+      </svg>
+      <svg class="float-icon chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 3v18h18M7 10v8M11 7v11M15 13v5M19 5v13"/>
+      </svg>
+    </div>
 
-   <!-- ========================================================
-                     Linha: logo + UNICAP + badges
-        ======================================================== -->
+    <div class="header-inner">
       <div class="header-top">
         <div class="inst-logo" aria-hidden="true">🎓</div>
         <div class="inst-info">
@@ -63,50 +67,14 @@
           <span class="badge badge-alu">👩‍💻 Vanessa Rafaella</span>
         </div>
       </div>
-      
 
-<!-- ========================================================
-                PROJETO PRATICO - TITLE H1
-     ======================================================== -->
-   
       <div class="header-title">
         <div class="tag">Projeto Prático</div>
         <h1>Simulador de <span>IRPF</span><br/>Imposto de Renda 2025</h1>
         <p class="sub">Cálculo mensal de alíquotas efetivas · Tabela vigente em Janeiro/2025</p>
       </div>
     </div>
-    
-    <!-- ========================================================
-                ICONS MONEY, NOTES, CALC, CHART 
-     ======================================================== -->
-     
-     <div class="floating-icons" aria-hidden="true">
-         
-         <!-- CALC -->
-        <svg class="float-icon calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="4" y="2" width="16" height="20" rx="2"/>
-          <path d="M8 7h8M8 11h8M8 15h.01M12 15h.01M16 15h.01M8 19h.01M12 19h.01M16 19h.01"/>
-        </svg>
-        <!-- MONEY -->
-        <svg class="float-icon money" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"/>
-        </svg>
-       <!-- NOTES -->
-        <svg class="float-icon notes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="2" y="6" width="20" height="14" rx="2"/>
-          <path d="M6 10h12M6 14h12"/>
-        </svg>
-       <!-- CHART -->
-        <svg class="float-icon chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 3v18h18M7 10v8M11 7v11M15 13v5M19 5v13"/>
-        </svg>
-      </div>
-      
-    <!-- ============================================================================
-         WAVES - Ondas decorativas — aria-hidden: leitores de tela ignoram
-     ============================================================================== -->
 
-    <!-- Ondas decorativas — aria-hidden: leitores de tela ignoram -->
     <div class="waves-wrap" aria-hidden="true">
       <svg class="wave wave-1" viewBox="0 0 1440 50" preserveAspectRatio="none">
         <path d="M0,25 C240,50 480,0 720,25 C960,50 1200,0 1440,25 L1440,50 L0,50Z"/>
@@ -120,75 +88,45 @@
     </div>
   </header>
 
- 
   <main role="main">
 
-  
-    
-    <!-- ══════════════════════════════════════════
-                     CALCULADORA 
-         ══════════════════════════════════════════ -->
-   
-    <!-- CALCULADORA -->
+    <!-- ══ CALCULADORA ══ -->
     <section class="card" aria-labelledby="titulo-calculadora">
- 
+
       <div class="calc-hero">
         <div class="calc-tag" aria-hidden="true">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/>
+            <rect x="4" y="2" width="16" height="20" rx="2"/>
+            <path d="M9 7h6M9 11h6M9 15h4"/>
           </svg>
           Calculadora
         </div>
- 
+
         <h2 class="calc-hero-title" id="titulo-calculadora">
           Calcule seu <span>IRPF</span>
         </h2>
-     
-      <label for="salario">
-        Rendimento Mensal Tributável (Salário Bruto)
-      </label>
+
+        <div class="typing-row" aria-label="Digite seu salário mensal">
+          <span class="typing-text" id="typingEl" aria-hidden="true"></span>
+        </div>
+      </div><!-- /calc-hero -->
+
+      <label for="salario">Rendimento Mensal Tributável (Salário Bruto)</label>
 
       <div class="input-wrap">
-
-        <!-- "R$" posicionado absolutamente dentro do input
-             aria-hidden: o aria-label do input já diz "em reais" -->
-             
         <span class="inp-prefix" aria-hidden="true">R$</span>
-
-        <!--
-          type="text": permite vírgula (type="number" não permite!)
-          inputmode="decimal": no mobile, abre teclado numérico com vírgula
-          aria-label: descrição para leitores de tela (placeholder some ao digitar)
-          aria-required: campo obrigatório
-          aria-describedby: vincula à mensagem de erro
-        -->
-        <input
-          type="text"
-          id="salario"
-          placeholder="0,00"
-          inputmode="decimal"
-          autocomplete="off"
-          aria-label="Salário mensal bruto em reais"
-          aria-required="true"
-          aria-describedby="erroInput"
-        />
+        <input type="text" id="salario" placeholder="0,00" inputmode="decimal"
+          autocomplete="off" aria-label="Salário mensal bruto em reais"
+          aria-required="true" aria-describedby="erroInput"/>
       </div>
 
-      <!-- Mensagem de erro — role="alert" anuncia imediatamente ao aparecer -->
       <span class="erro" id="erroInput" role="alert" aria-live="assertive">
         ⚠ Informe um valor válido maior que zero.
       </span>
 
-      <!-- =======================================
-             Botões de ação 
-        ======================================= -->
-      
       <div class="btn-row">
-        
-        <button class="btn btn-calc" id="btnCalc" type="button"
-          onclick="calcular()"
-          aria-label="Calcular imposto de renda sobre o salário informado"
-        >
+        <button class="btn btn-calc" id="btnCalc" type="button" onclick="calcular()"
+          aria-label="Calcular imposto de renda sobre o salário informado">
           <span class="icoBtn" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M9 17H7A5 5 0 0 1 7 7h2"/>
@@ -199,13 +137,8 @@
           <span class="spin" aria-hidden="true"></span>
           Calcular IRPF
         </button>
-
-        <button
-          class="btn btn-limpar"
-          type="button"
-          onclick="limpar()"
-          aria-label="Limpar formulário e resultado"
-        >
+        <button class="btn btn-limpar" type="button" onclick="limpar()"
+          aria-label="Limpar formulário e resultado">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M3 6h18M19 6l-1 14H6L5 6M10 11v6M14 11v6"/>
           </svg>
@@ -214,14 +147,9 @@
       </div>
     </section>
 
-
-    <!-- ══════════════════════════════════════════
-         RESULTADO DO CÁLCULO
-         ══════════════════════════════════════════ -->
+    <!-- ══ RESULTADO ══ -->
     <div id="resultado" aria-live="polite" aria-atomic="false">
-
-      <section class="card" style="border: 2px solid var(--bg-green-light);" aria-labelledby="titulo-resultado">
-
+      <section class="card" style="border:2px solid var(--bg-green-light);" aria-labelledby="titulo-resultado">
         <div class="sec-title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
@@ -229,8 +157,6 @@
           </svg>
           <h2 id="titulo-resultado">Resultado do Cálculo</h2>
         </div>
-
-        <!-- Dois cards: imposto + alíquota efetiva -->
         <div class="res-grid">
           <div class="res-card rv">
             <div class="res-label">💰 Imposto a Recolher</div>
@@ -243,59 +169,36 @@
             <div class="res-sub">Sobre o rendimento bruto</div>
           </div>
         </div>
-
-        <!-- Tabela de detalhamento por faixa —
-             overflow-x: auto = rola horizontalmente no mobile sem quebrar -->
-        <div style="overflow-x:auto; margin-bottom: 4px;" role="region" aria-label="Detalhamento por faixa" tabindex="0">
+        <div style="overflow-x:auto;margin-bottom:4px;" role="region" aria-label="Detalhamento por faixa" tabindex="0">
           <table class="tabela-res">
-            <!-- caption invisível: descreve a tabela para leitores de tela -->
             <caption style="display:none;">Imposto calculado por faixa de renda</caption>
             <thead>
               <tr>
-                <!-- scope="col": este th é cabeçalho de coluna (acessibilidade) -->
                 <th scope="col">Faixa</th>
                 <th scope="col" class="col-h">Limite</th>
                 <th scope="col" style="text-align:right;">Imposto na Faixa</th>
               </tr>
             </thead>
-            <!-- tbody preenchido dinamicamente pelo JavaScript -->
             <tbody id="tbodyRes"></tbody>
           </table>
         </div>
-
-        <!-- Barra de progresso -->
         <div class="prog-wrap">
           <div class="prog-labels">
             <span>Alíquota efetiva sobre o salário total</span>
             <span id="progPct">0%</span>
           </div>
-          <div
-            class="prog-track"
-            role="progressbar"
-            aria-valuenow="0"
-            aria-valuemin="0"
-            aria-valuemax="27.5"
-            aria-label="Alíquota efetiva"
-          >
+          <div class="prog-track" role="progressbar"
+            aria-valuenow="0" aria-valuemin="0" aria-valuemax="27.5" aria-label="Alíquota efetiva">
             <div class="prog-fill" id="progFill"></div>
           </div>
         </div>
-
-        <!-- Nota explicativa -->
         <div class="nota" role="note">
-          <span style="font-size:18px; flex-shrink:0;" aria-hidden="true">💡</span>
+          <span style="font-size:18px;flex-shrink:0;" aria-hidden="true">💡</span>
           <span>No sistema progressivo, cada real do salário é tributado apenas na alíquota da <strong>sua faixa</strong> — nunca o salário todo na alíquota mais alta. Por isso a alíquota <strong>efetiva</strong> é sempre menor que a <strong>nominal</strong> da última faixa atingida.</span>
         </div>
       </section>
-
-      <!-- Botão de PDF fora do card de resultado -->
-      <div class="btn-row" style="margin-top: 0;">
-        <button
-          class="btn btn-pdf"
-          type="button"
-          onclick="gerarPDF()"
-          aria-label="Baixar resultado como arquivo PDF"
-        >
+      <div class="btn-row" style="margin-top:0;">
+        <button class="btn btn-pdf" type="button" onclick="gerarPDF()" aria-label="Baixar resultado como arquivo PDF">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
             <polyline points="14 2 14 8 20 8"/>
@@ -307,31 +210,9 @@
       </div>
     </div>
 
-
-    <!-- ══════════════════════════════════════════
-         2º — ACORDEÕES EDUCATIVOS (depois da calculadora)
-         ══════════════════════════════════════════ -->
-
-    <!-- ACORDEÃO 1: O que é o IRPF -->
+    <!-- ══ ACORDEÃO 1 ══ -->
     <div class="acordeao">
-      <!--
-        onclick="toggleAcord(this)":
-        "this" = referência ao próprio elemento clicado.
-        A função recebe o header para saber qual acordeão manipular.
-
-        aria-expanded: informa leitores de tela se está aberto ou fechado.
-        O JavaScript atualiza este valor ao clicar.
-
-        tabindex="0": permite navegar com a tecla Tab.
-        role="button": identifica como botão para leitores de tela.
-      -->
-      <div
-        class="acord-header"
-        onclick="toggleAcord(this)"
-        aria-expanded="false"
-        role="button"
-        tabindex="0"
-      >
+      <div class="acord-header" onclick="toggleAcord(this)" aria-expanded="false" role="button" tabindex="0">
         <div class="acord-esq">
           <span class="acord-icone" aria-hidden="true">🏛️</span>
           <div>
@@ -340,41 +221,22 @@
           </div>
         </div>
         <div class="acord-seta" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
       </div>
-      <!-- role="region" + aria-label: define região nomeada para leitores de tela -->
       <div class="acord-body" role="region" aria-label="O que é o IRPF">
         <div class="acord-body-inner">
           <div class="edu-grid">
-            <div class="edu-card cv">
-              <div class="ei" aria-hidden="true">🏛️</div>
-              <div class="et">O que é o IRPF?</div>
-              <div class="ed">O <strong>Imposto de Renda da Pessoa Física</strong> é um tributo federal cobrado sobre rendimentos (salários, aluguéis, etc.) de cada cidadão, gerenciado pela <strong>Receita Federal</strong>.</div>
-            </div>
-            <div class="edu-card ca">
-              <div class="ei" aria-hidden="true">🏥</div>
-              <div class="et">Para que serve?</div>
-              <div class="ed">Financia serviços públicos: <strong>saúde, educação, segurança e infraestrutura</strong>. É uma das maiores fontes de receita do governo federal.</div>
-            </div>
-            <div class="edu-card cy">
-              <div class="ei" aria-hidden="true">📅</div>
-              <div class="et">Quando é cobrado?</div>
-              <div class="ed">Para CLT: descontado <strong>todo mês na folha</strong> pelo empregador (IRRF). Uma vez por ano: <strong>Declaração do IR</strong> para ajustar o valor final.</div>
-            </div>
-            <div class="edu-card cg">
-              <div class="ei" aria-hidden="true">⚖️</div>
-              <div class="et">É progressivo — o que significa?</div>
-              <div class="ed">Quem ganha mais paga proporcionalmente mais. A alíquota <em>efetiva</em> é sempre menor que a da última faixa atingida.</div>
-            </div>
+            <div class="edu-card cv"><div class="ei">🏛️</div><div class="et">O que é o IRPF?</div><div class="ed">O <strong>Imposto de Renda da Pessoa Física</strong> é um tributo federal cobrado sobre rendimentos de cada cidadão, gerenciado pela <strong>Receita Federal</strong>.</div></div>
+            <div class="edu-card ca"><div class="ei">🏥</div><div class="et">Para que serve?</div><div class="ed">Financia serviços públicos: <strong>saúde, educação, segurança e infraestrutura</strong>. É uma das maiores fontes de receita do governo federal.</div></div>
+            <div class="edu-card cy"><div class="ei">📅</div><div class="et">Quando é cobrado?</div><div class="ed">Para CLT: descontado <strong>todo mês na folha</strong> pelo empregador (IRRF). Uma vez por ano: <strong>Declaração do IR</strong> para ajustar o valor final.</div></div>
+            <div class="edu-card cg"><div class="ei">⚖️</div><div class="et">É progressivo — o que significa?</div><div class="ed">Quem ganha mais paga proporcionalmente mais. A alíquota <em>efetiva</em> é sempre menor que a da última faixa atingida.</div></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ACORDEÃO 2: Como funciona -->
+    <!-- ══ ACORDEÃO 2 ══ -->
     <div class="acordeao">
       <div class="acord-header" onclick="toggleAcord(this)" aria-expanded="false" role="button" tabindex="0">
         <div class="acord-esq">
@@ -385,41 +247,18 @@
           </div>
         </div>
         <div class="acord-seta" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
       </div>
       <div class="acord-body" role="region" aria-label="Como funciona o cálculo">
         <div class="acord-body-inner">
-          <div class="edu-grid" style="margin-bottom: 20px;">
-            <div class="edu-card cv">
-              <div class="ei" aria-hidden="true">🍰</div>
-              <div class="et">O imposto é como fatias de bolo</div>
-              <div class="ed">Cada parte do salário é tributada na alíquota da <strong>sua faixa</strong>. Nunca o salário todo. Por isso a alíquota efetiva é menor que a última faixa.</div>
-            </div>
-            <div class="edu-card ca">
-              <div class="ei" aria-hidden="true">📐</div>
-              <div class="et">Exemplo: salário de R$ 3.000</div>
-              <div class="ed">
-                3.000 × 15% = R$ 450,00<br/>
-                450,00 − R$ 381,44 (dedução) = <strong>R$ 68,56</strong><br/>
-                Alíquota efetiva = <strong>2,28%</strong>
-              </div>
-            </div>
+          <div class="edu-grid" style="margin-bottom:20px;">
+            <div class="edu-card cv"><div class="ei">🍰</div><div class="et">O imposto é como fatias de bolo</div><div class="ed">Cada parte do salário é tributada na alíquota da <strong>sua faixa</strong>. Nunca o salário todo.</div></div>
+            <div class="edu-card ca"><div class="ei">📐</div><div class="et">Exemplo: salário de R$ 3.000</div><div class="ed">3.000 × 15% = R$ 450,00<br/>450,00 − R$ 381,44 = <strong>R$ 68,56</strong><br/>Alíquota efetiva = <strong>2,28%</strong></div></div>
           </div>
-          <!-- overflow-x: auto = tabela rolável no mobile -->
-          <div style="overflow-x: auto;" role="region" aria-label="Tabela de alíquotas" tabindex="0">
+          <div style="overflow-x:auto;" role="region" aria-label="Tabela de alíquotas" tabindex="0">
             <table class="tabela">
-              <thead>
-                <tr>
-                  <th scope="col">Faixa</th>
-                  <th scope="col" class="col-h">Base de Cálculo</th>
-                  <th scope="col">Alíquota</th>
-                  <th scope="col" class="col-h">Dedução</th>
-                  <th scope="col">O que significa</th>
-                </tr>
-              </thead>
+              <thead><tr><th scope="col">Faixa</th><th scope="col" class="col-h">Base de Cálculo</th><th scope="col">Alíquota</th><th scope="col" class="col-h">Dedução</th><th scope="col">O que significa</th></tr></thead>
               <tbody>
                 <tr><td><span class="pill p0">1ª Faixa</span></td><td class="mono col-h">Até R$ 2.259,20</td><td><span class="pill p0">Isento · 0%</span></td><td class="mono col-h">—</td><td style="font-size:12px;color:var(--color-text-secondary);">Não paga IR 🎉</td></tr>
                 <tr><td><span class="pill p7">2ª Faixa</span></td><td class="mono col-h">R$ 2.259,21 a R$ 2.826,65</td><td><span class="pill p7">7,5%</span></td><td class="mono col-h">R$ 169,44</td><td style="font-size:12px;color:var(--color-text-secondary);">Só o excedente de R$ 2.259,20</td></tr>
@@ -433,7 +272,7 @@
       </div>
     </div>
 
-    <!-- ACORDEÃO 3: Glossário -->
+    <!-- ══ ACORDEÃO 3 ══ -->
     <div class="acordeao">
       <div class="acord-header" onclick="toggleAcord(this)" aria-expanded="false" role="button" tabindex="0">
         <div class="acord-esq">
@@ -444,9 +283,7 @@
           </div>
         </div>
         <div class="acord-seta" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
       </div>
       <div class="acord-body" role="region" aria-label="Glossário de termos">
@@ -465,45 +302,25 @@
 
   </main>
 
-  
+  <footer class="cyber-footer">
+    <div class="footer-floating-code"># &lt; PROGRAMAÇĀO PARA @ WEB</div>
+    <div class="footer-floating-code">© 2026 VANESSA LIMA • All rights reserved</div>
+    <div class="footer-floating-code">Built with ❤️ and lots of ☕</div>
+    <div class="footer-floating-code">System.out.println("Thanks for visiting!");</div>
+    <div class="footer-content-wrapper">
+      <div class="footer-name">Programaçāo para<span class="highlight"> Web</span><span class="cursor-blink"></span></div>
+      <div class="footer-subtitle">UNICAP - SISTEMAS PARA INTERNET</div>
+      <div class="footer-neon-line"></div>
+      <div class="footer-link-main"><span class="girl-dev">👩🏻‍💻</span> Vanessa Rafaella</div>
+      <div class="tech-badges">
+        <span class="tech-badge">HTML5</span>
+        <span class="tech-badge">CSS3</span>
+        <span class="tech-badge">JavaScript</span>
+      </div>
+    </div>
+    <div class="footer-rainbow-line"></div>
+  </footer>
 
-   <!-- ============================================= -->
-    <!-- footer cyber -->
-    <!-- ============================================= -->
-    <footer class="cyber-footer">
-            <div class="footer-floating-code"># < PROGRAMAÇĀO PARA @ WEB</div>
-        <div class="footer-floating-code">© 2026 VANESSA LIMA • All rights reserved</div>
-        <div class="footer-floating-code">Built with ❤️ and lots of ☕</div>
-        <div class="footer-floating-code">System.out.println("Thanks for visiting!");</div>
-
-        <div class="footer-content-wrapper">
-            <div class="footer-name">
-                Programaçāo para<span class="highlight"> Web</span><span class="cursor-blink"></span>
-            </div>
-            <div class="footer-subtitle">UNICAP - SISTEMAS PARA INTERNET</div>
-            
-            <div class="footer-neon-line"></div>
-            
-            <div class="footer-link-main">
-                <span class="girl-dev">👩🏻‍💻</span> Vanessa Rafaella
-            </div>
-            
-            <div class="tech-badges">
-                <span class="tech-badge">HTML5</span>
-                <span class="tech-badge">CSS3</span>
-                <span class="tech-badge">JavaScript</span>
-            </div>
-        </div>
-
-        <div class="footer-rainbow-line"></div>
-    </footer>
-
-
-    <script src="./js/script.js"></script>
-    
+  <script src="./js/script.js"></script>
 </body>
 </html>
-
-
-
-

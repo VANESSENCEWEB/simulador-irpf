@@ -1,9 +1,8 @@
 /* ════════════════════════════════════════════════════════
        DADOS — TABELA IRPF JANEIRO 2025
-       Array de objetos: cada objeto = uma faixa de renda.
-       Array  = lista: [ item, item, item ]
-       Objeto = ficha: { propriedade: valor, propriedade: valor }
-       ════════════════════════════════════════════════════════ */
+════════════════════════════════════════════════════════ */
+
+
     var FAIXAS = [
       { label: '1ª Faixa', limite: 2259.20,  pill: 'p0',  texto: 'Isento 0%' },
       { label: '2ª Faixa', limite: 2826.65,  pill: 'p7',  texto: '7,5%'      },
@@ -13,9 +12,8 @@
       /* Infinity = sem limite superior — valor especial do JavaScript */
     ];
 
-
     /* ════════════════════════════════════════════════════════
-       FUNÇÕES DE CÁLCULO — UMA POR FAIXA (exigência do professor)
+       FUNÇÕES DE CÁLCULO — UMA POR FAIXA 
        ════════════════════════════════════════════════════════
 
        Lógica de cada faixa:
@@ -191,7 +189,7 @@
     /* ════════════════════════════════════════════════════════
        PREENCHER TABELA DE RESULTADO
        ════════════════════════════════════════════════════════
-       Criamos as linhas da tabela via JavaScript (DOM dinâmico)
+       As linhas da tabela sāo criadas via JavaScript (DOM dinâmico)
        porque os valores só existem depois do cálculo.
 
        document.createElement('tr') = cria uma nova linha <tr>
